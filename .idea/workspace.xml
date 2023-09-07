@@ -1,12 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+<<<<<<< HEAD
   <component name="ChangeListManager">
     <list default="true" id="5fe262a9-29ce-4fbf-9780-8f1aced31d52" name="Changes" comment="" />
+=======
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5fe262a9-29ce-4fbf-9780-8f1aced31d52" name="Changes" comment="create game">
+      <change afterPath="$PROJECT_DIR$/src/tankgame/MyFrame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tankgame/MyPanel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tankgame/Tank.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tankgame/myTank.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" />
+    </list>
+>>>>>>> 0db6842 (tankGame01)
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+<<<<<<< HEAD
+=======
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+>>>>>>> 0db6842 (tankGame01)
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -36,6 +62,7 @@
       <option name="presentableId" value="Default" />
       <updated>1694125364278</updated>
     </task>
+<<<<<<< HEAD
     <servers />
   </component>
   <component name="XDebuggerManager">
@@ -48,5 +75,21 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+=======
+    <task id="LOCAL-00001" summary="create game">
+      <option name="closed" value="true" />
+      <created>1694125417531</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1694125417531</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="create game" />
+    <option name="LAST_COMMIT_MESSAGE" value="create game" />
+>>>>>>> 0db6842 (tankGame01)
   </component>
 </project>
