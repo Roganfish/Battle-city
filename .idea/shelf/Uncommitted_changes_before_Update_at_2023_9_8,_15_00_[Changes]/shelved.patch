@@ -1,0 +1,72 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"5fe262a9-29ce-4fbf-9780-8f1aced31d52\" name=\"Changes\" comment=\"tankGame02\">\n      <change afterPath=\"$PROJECT_DIR$/src/tankgame/EnemyTank.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/tankgame/MyFrame.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/tankgame/MyFrame.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/tankgame/MyPanel.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/tankgame/MyPanel.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/tankgame/Tank.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/tankgame/Tank.java\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"FileTemplateManagerImpl\">\n    <option name=\"RECENT_TEMPLATES\">\n      <list>\n        <option value=\"Class\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"PUSH_AUTO_UPDATE\" value=\"true\" />\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"ProjectColorInfo\"><![CDATA[{\n  \"associatedIndex\": 1\n}]]></component>\n  <component name=\"ProjectId\" id=\"2V5UJjBCDrLc3X2Waa4CL3LERDA\" />\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\"><![CDATA[{\n  \"keyToString\": {\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\n    \"git-widget-placeholder\": \"master\",\n    \"onboarding.tips.debug.path\": \"/Users/mac/Downloads/TankGamezzy/src/Main.java\"\n  }\n}]]></component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"5fe262a9-29ce-4fbf-9780-8f1aced31d52\" name=\"Changes\" comment=\"\" />\n      <created>1694125364278</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1694125364278</updated>\n    </task>\n    <task id=\"LOCAL-00001\" summary=\"create game\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1694125417531</created>\n      <option name=\"number\" value=\"00001\" />\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1694125417531</updated>\n    </task>\n    <task id=\"LOCAL-00002\" summary=\"tankGame01\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1694138562095</created>\n      <option name=\"number\" value=\"00002\" />\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1694138562095</updated>\n    </task>\n    <task id=\"LOCAL-00003\" summary=\"tankGame01\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1694138679393</created>\n      <option name=\"number\" value=\"00003\" />\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1694138679393</updated>\n    </task>\n    <task id=\"LOCAL-00004\" summary=\"tankGame02\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1694138719417</created>\n      <option name=\"number\" value=\"00004\" />\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1694138719417</updated>\n    </task>\n    <option name=\"localTasksCounter\" value=\"5\" />\n    <servers />\n  </component>\n  <component name=\"Vcs.Log.Tabs.Properties\">\n    <option name=\"TAB_STATES\">\n      <map>\n        <entry key=\"MAIN\">\n          <value>\n            <State />\n          </value>\n        </entry>\n      </map>\n    </option>\n  </component>\n  <component name=\"VcsManagerConfiguration\">\n    <MESSAGE value=\"create game\" />\n    <MESSAGE value=\"tankGame01\" />\n    <MESSAGE value=\"tankGame02\" />\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"tankGame02\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 702f9d3bd801f20dd9a728a425940e82458f1696)
++++ b/.idea/workspace.xml	(date 1694141971973)
+@@ -4,12 +4,8 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="5fe262a9-29ce-4fbf-9780-8f1aced31d52" name="Changes" comment="tankGame02">
+-      <change afterPath="$PROJECT_DIR$/src/tankgame/EnemyTank.java" afterDir="false" />
++    <list default="true" id="5fe262a9-29ce-4fbf-9780-8f1aced31d52" name="Changes" comment="enemy tank">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/tankgame/MyFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tankgame/MyFrame.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/tankgame/MyPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tankgame/MyPanel.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/tankgame/Tank.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tankgame/Tank.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -26,6 +22,20 @@
+   <component name="Git.Settings">
+     <option name="PUSH_AUTO_UPDATE" value="true" />
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
++  </component>
++  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
++  "lastFilter": {
++    "state": "OPEN",
++    "assignee": "Roganfish"
++  }
++}]]></component>
++  <component name="GithubPullRequestsUISettings">
++    <option name="selectedUrlAndAccountId">
++      <UrlAndAccount>
++        <option name="accountId" value="19419d3c-9a8f-44a8-b02e-74f555c5e2c2" />
++        <option name="url" value="https://github.com/Roganfish/Battle-city.git" />
++      </UrlAndAccount>
++    </option>
+   </component>
+   <component name="ProjectColorInfo"><![CDATA[{
+   "associatedIndex": 1
+@@ -85,7 +95,15 @@
+       <option name="project" value="LOCAL" />
+       <updated>1694138719417</updated>
+     </task>
+-    <option name="localTasksCounter" value="5" />
++    <task id="LOCAL-00005" summary="enemy tank">
++      <option name="closed" value="true" />
++      <created>1694141800321</created>
++      <option name="number" value="00005" />
++      <option name="presentableId" value="LOCAL-00005" />
++      <option name="project" value="LOCAL" />
++      <updated>1694141800321</updated>
++    </task>
++    <option name="localTasksCounter" value="6" />
+     <servers />
+   </component>
+   <component name="Vcs.Log.Tabs.Properties">
+@@ -103,6 +121,7 @@
+     <MESSAGE value="create game" />
+     <MESSAGE value="tankGame01" />
+     <MESSAGE value="tankGame02" />
+-    <option name="LAST_COMMIT_MESSAGE" value="tankGame02" />
++    <MESSAGE value="enemy tank" />
++    <option name="LAST_COMMIT_MESSAGE" value="enemy tank" />
+   </component>
+ </project>
+\ No newline at end of file
