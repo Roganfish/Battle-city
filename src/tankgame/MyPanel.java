@@ -6,18 +6,24 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.util.Vector;
 
-public class MyPanel extends JPanel implements KeyListener {
+public class MyPanel extends JPanel implements KeyListener, Runnable{
     //define my tank
-    myTank hero = null;
+    MyTank hero = null;
     Vector<EnemyTank> enemyTanks = new Vector<>();
     int enemyTankSize = 3;
     public MyPanel(){
-        hero=new myTank(100,100);
+        hero=new MyTank(100,100);
         hero.setSpeed(4);
         for (int i=0;i<enemyTankSize;i++){
             EnemyTank et = new EnemyTank((100*(i+2)),0);
             et.setDirection(2);
             enemyTanks.add(et);
+
+
+            Shot shot = new Shot(et.getX() + 20, et.getY() + 60, et.getDirection());
+            et.shots.add(shot);
+            new Thread(shot).start();
+
         }
     }
     @Override
@@ -25,9 +31,26 @@ public class MyPanel extends JPanel implements KeyListener {
         super.paint(g);
         g.fillRect(0,0,1000,750);
         drawTank(hero.getX(), hero.getY(), g,hero.getDirection(),0);
+
+
+        if (hero.shot != null && (hero.shot.isLive)){
+        g.draw3DRect(hero.shot.getX(),hero.shot.getY(),2,2,false);
+        }
+
+
         for (int i=0;i<enemyTanks.size();i++){
             EnemyTank enemyTank = enemyTanks.get(i);
             drawTank(enemyTank.getX(),enemyTank.getY(),g,enemyTank.getDirection(),1);
+
+            for (int j=0;j<enemyTank.shots.size();j++){
+                Shot shot = enemyTank.shots.get(j);
+                if (shot.isLive){
+                    g.draw3DRect(shot.getX(),shot.getY(),2,2,false);
+                }else {
+                    enemyTank.shots.remove(shot);
+                }
+
+            }
         }
     }
 
@@ -97,6 +120,9 @@ public class MyPanel extends JPanel implements KeyListener {
                 hero.setDirection(3);
                 hero.left();
                 break;
+            case KeyEvent.VK_J:
+                hero.shotEnemyTank();
+                break;
         }
         this.repaint();
     }
@@ -104,5 +130,17 @@ public class MyPanel extends JPanel implements KeyListener {
     @Override
     public void keyReleased(KeyEvent e) {
 
+    }
+
+    @Override
+    public void run() {
+        while (true){
+            try {
+                Thread.sleep(100);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+            this.repaint();
+        }
     }
 }
