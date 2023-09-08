@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5fe262a9-29ce-4fbf-9780-8f1aced31d52" name="Changes" comment="tankGame01" />
+    <list default="true" id="5fe262a9-29ce-4fbf-9780-8f1aced31d52" name="Changes" comment="tankGame02">
+      <change afterPath="$PROJECT_DIR$/src/tankgame/EnemyTank.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tankgame/MyFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tankgame/MyFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tankgame/MyPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tankgame/MyPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tankgame/Tank.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tankgame/Tank.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -71,7 +77,15 @@
       <option name="project" value="LOCAL" />
       <updated>1694138679393</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="tankGame02">
+      <option name="closed" value="true" />
+      <created>1694138719417</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1694138719417</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -88,6 +102,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="create game" />
     <MESSAGE value="tankGame01" />
-    <option name="LAST_COMMIT_MESSAGE" value="tankGame01" />
+    <MESSAGE value="tankGame02" />
+    <option name="LAST_COMMIT_MESSAGE" value="tankGame02" />
   </component>
 </project>
