@@ -3,7 +3,7 @@ package tankgame;
 public class Bomb {
     int x,y;
     boolean isLive = true;
-    int life = 9;
+    int life = 14;
 
     public Bomb(int x, int y) {
         this.x = x;

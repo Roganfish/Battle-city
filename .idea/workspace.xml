@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5fe262a9-29ce-4fbf-9780-8f1aced31d52" name="Changes" comment="bullet">
-      <change afterPath="$PROJECT_DIR$/src/tankgame/Bomb.java" afterDir="false" />
+    <list default="true" id="5fe262a9-29ce-4fbf-9780-8f1aced31d52" name="Changes" comment="dis">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tankgame/Bomb.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tankgame/Bomb.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tankgame/EnemyTank.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tankgame/EnemyTank.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tankgame/MyPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tankgame/MyPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tankgame/Shot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tankgame/Shot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tankgame/Tank.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tankgame/Tank.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,12 +27,12 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="REBASE" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Roganfish"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Roganfish&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -52,14 +50,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;/Users/mac/Downloads/TankGamezzy/src/Main.java&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "/Users/mac/Downloads/TankGamezzy/out/production/TankGamezzy",
+    "onboarding.tips.debug.path": "/Users/mac/Downloads/TankGamezzy/src/Main.java"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/out/production/TankGamezzy" />
+      <recent name="$PROJECT_DIR$/out/production/TankGamezzy/tankgame" />
+      <recent name="$PROJECT_DIR$/out/production" />
+      <recent name="$PROJECT_DIR$/src/Images" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/out/production/TankGamezzy" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -133,7 +143,15 @@
       <option name="project" value="LOCAL" />
       <updated>1694165780570</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="dis">
+      <option name="closed" value="true" />
+      <created>1694293479783</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1694293479783</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -166,6 +184,7 @@
     <MESSAGE value="123123" />
     <MESSAGE value="1231234" />
     <MESSAGE value="bullet" />
-    <option name="LAST_COMMIT_MESSAGE" value="bullet" />
+    <MESSAGE value="dis" />
+    <option name="LAST_COMMIT_MESSAGE" value="dis" />
   </component>
 </project>

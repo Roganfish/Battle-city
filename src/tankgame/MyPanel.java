@@ -11,11 +11,16 @@ public class MyPanel extends JPanel implements KeyListener, Runnable{
     MyTank hero = null;
     Vector<EnemyTank> enemyTanks = new Vector<>();
     int enemyTankSize = 3;
+    Vector<Bomb> bombs = new Vector<>();
+    Image image1 = null;
+    Image image2 = null;
+    Image image3 = null;
     public MyPanel(){
         hero=new MyTank(100,100);
         hero.setSpeed(4);
         for (int i=0;i<enemyTankSize;i++){
             EnemyTank et = new EnemyTank((100*(i+2)),0);
+            new Thread(et).start();
             et.setDirection(2);
             enemyTanks.add(et);
 
@@ -23,8 +28,12 @@ public class MyPanel extends JPanel implements KeyListener, Runnable{
             Shot shot = new Shot(et.getX() + 20, et.getY() + 60, et.getDirection());
             et.shots.add(shot);
             new Thread(shot).start();
-
         }
+        image1 = Toolkit.getDefaultToolkit().getImage(MyPanel.class.getResource("/image1.png"));
+        image2 = Toolkit.getDefaultToolkit().getImage(MyPanel.class.getResource("/image2.png"));
+        image3 = Toolkit.getDefaultToolkit().getImage(MyPanel.class.getResource("/image3.png"));
+        Bomb bomb1 = new Bomb(10, 10);
+        bombs.add(bomb1);
     }
     @Override
     public void paint(Graphics g){
@@ -36,6 +45,7 @@ public class MyPanel extends JPanel implements KeyListener, Runnable{
         if (hero.shot != null && (hero.shot.isLive)){
         g.draw3DRect(hero.shot.getX(),hero.shot.getY(),2,2,false);
         }
+
 
 
         for (int i=0;i<enemyTanks.size();i++){
@@ -55,6 +65,22 @@ public class MyPanel extends JPanel implements KeyListener, Runnable{
                 }
             }
         }
+
+        for (int i =0;i<bombs.size();i++){
+            Bomb bomb = bombs.get(i);
+            if (bomb.life > 10){
+                g.drawImage(image1,bomb.x,bomb.y,60,60,this);
+            }else if (bomb.life>5){
+                g.drawImage(image2,bomb.x,bomb.y,60,60,this);
+            }else {
+                g.drawImage(image3,bomb.x,bomb.y,60,60,this);
+            }
+            bomb.liferDown();
+            if (bomb.life==0){
+                bombs.remove(bomb);
+            }
+        }
+
     }
 
     public void drawTank(int x, int y, Graphics g, int direction, int type){
@@ -109,19 +135,27 @@ public class MyPanel extends JPanel implements KeyListener, Runnable{
         switch (e.getKeyCode()){
             case KeyEvent.VK_W:
                 hero.setDirection(0);
-                hero.up();
+                if (hero.getY()>0) {
+                    hero.up();
+                }
                 break;
             case KeyEvent.VK_D:
                 hero.setDirection(1);
-                hero.right();
+                if (hero.getX() +60 < 1000) {
+                    hero.right();
+                }
                 break;
             case KeyEvent.VK_S:
                 hero.setDirection(2);
-                hero.down();
+                if (hero.getY()+60 < 750) {
+                    hero.down();
+                }
                 break;
             case KeyEvent.VK_A:
                 hero.setDirection(3);
-                hero.left();
+                if (hero.getX()>0) {
+                    hero.left();
+                }
                 break;
             case KeyEvent.VK_J:
                 hero.shotEnemyTank();
@@ -135,7 +169,7 @@ public class MyPanel extends JPanel implements KeyListener, Runnable{
 
     }
 
-    public static void hitTank(Shot s, EnemyTank t){
+    public void hitTank(Shot s, EnemyTank t){
         switch (t.getDirection()){
             case 0:
             case 2:
@@ -143,14 +177,22 @@ public class MyPanel extends JPanel implements KeyListener, Runnable{
                       && s.getY() > t.getY() && s.getY() < (t.getY()+60)){
                   s.isLive=false;
                   t.isLive=false;
+                  Bomb bomb = new Bomb(t.getX(), t.getY());
+                  bombs.add(bomb);
+                  enemyTanks.remove(t);
               }
+                break;
             case 1:
             case 3:
                 if (s.getX() > t.getX() && s.getX() < (t.getX() +60)
                         && s.getY() > t.getY() && s.getY() < (t.getY()+40)){
                     s.isLive=false;
                     t.isLive=false;
+                    Bomb bomb = new Bomb(t.getX(), t.getY());
+                    bombs.add(bomb);
+                    enemyTanks.remove(t);
                 }
+                break;
         }
 
     }
