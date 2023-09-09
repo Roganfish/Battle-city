@@ -40,16 +40,19 @@ public class MyPanel extends JPanel implements KeyListener, Runnable{
 
         for (int i=0;i<enemyTanks.size();i++){
             EnemyTank enemyTank = enemyTanks.get(i);
-            drawTank(enemyTank.getX(),enemyTank.getY(),g,enemyTank.getDirection(),1);
 
-            for (int j=0;j<enemyTank.shots.size();j++){
-                Shot shot = enemyTank.shots.get(j);
-                if (shot.isLive){
-                    g.draw3DRect(shot.getX(),shot.getY(),2,2,false);
-                }else {
-                    enemyTank.shots.remove(shot);
+            if (enemyTank.isLive) {
+                drawTank(enemyTank.getX(), enemyTank.getY(), g, enemyTank.getDirection(), 1);
+
+                for (int j = 0; j < enemyTank.shots.size(); j++) {
+                    Shot shot = enemyTank.shots.get(j);
+                    if (shot.isLive) {
+                        g.draw3DRect(shot.getX(), shot.getY(), 2, 2, false);
+                    } else {
+                        enemyTank.shots.remove(shot);
+                    }
+
                 }
-
             }
         }
     }
@@ -132,6 +135,26 @@ public class MyPanel extends JPanel implements KeyListener, Runnable{
 
     }
 
+    public static void hitTank(Shot s, EnemyTank t){
+        switch (t.getDirection()){
+            case 0:
+            case 2:
+              if (s.getX() > t.getX() && s.getX() < (t.getX() +40)
+                      && s.getY() > t.getY() && s.getY() < (t.getY()+60)){
+                  s.isLive=false;
+                  t.isLive=false;
+              }
+            case 1:
+            case 3:
+                if (s.getX() > t.getX() && s.getX() < (t.getX() +60)
+                        && s.getY() > t.getY() && s.getY() < (t.getY()+40)){
+                    s.isLive=false;
+                    t.isLive=false;
+                }
+        }
+
+    }
+
     @Override
     public void run() {
         while (true){
@@ -139,6 +162,12 @@ public class MyPanel extends JPanel implements KeyListener, Runnable{
                 Thread.sleep(100);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
+            }
+            if (hero.shot != null && hero.shot.isLive){
+                for (int i=0;i<enemyTanks.size();i++){
+                    EnemyTank enemyTank = enemyTanks.get(i);
+                    hitTank(hero.shot,enemyTank);
+                }
             }
             this.repaint();
         }
