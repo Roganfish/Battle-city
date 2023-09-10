@@ -5,6 +5,7 @@ public class Tank {
     private int y;//tank y
     private int direction;
     private int speed = 1;
+    boolean isLive =true;
 
 
     public Tank(int x, int y) {

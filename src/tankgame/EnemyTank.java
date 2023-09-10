@@ -4,7 +4,6 @@ import java.util.Vector;
 
 public class EnemyTank extends Tank implements Runnable{
     Vector<Shot> shots = new Vector<>();
-    boolean isLive = true;
     public EnemyTank(int x, int y) {
         super(x, y);
     }
@@ -12,9 +11,11 @@ public class EnemyTank extends Tank implements Runnable{
     @Override
     public void run() {
         while (true){
+
+
             switch (getDirection()){
                 case 0:
-                    for (int i=0;i<30;i++){
+                    for (int i=0;i<50;i++){
                         if (getY()>0) {
                             up();
                         }
@@ -26,7 +27,7 @@ public class EnemyTank extends Tank implements Runnable{
                     }
                     break;
                 case 1:
-                    for (int i=0;i<30;i++){
+                    for (int i=0;i<50;i++){
                         if (getX() +60 < 1000) {
                             right();
                         }
@@ -38,7 +39,7 @@ public class EnemyTank extends Tank implements Runnable{
                     }
                     break;
                 case 2:
-                    for (int i=0;i<30;i++){
+                    for (int i=0;i<50;i++){
                         if (getY()+60 < 750) {
                             down();
                         }
@@ -50,7 +51,7 @@ public class EnemyTank extends Tank implements Runnable{
                     }
                     break;
                 case 3:
-                    for (int i=0;i<30;i++){
+                    for (int i=0;i<50;i++){
                         if (getX()>0) {
                             left();
                         }
@@ -61,6 +62,26 @@ public class EnemyTank extends Tank implements Runnable{
                         }
                     }
                     break;
+            }
+            if (isLive && shots.isEmpty()){
+                Shot s = null;
+                switch (getDirection()){
+                    case 0:
+                        s = new Shot(getX() + 20, getY(), getDirection());
+                        break;
+                    case 1:
+                        s = new Shot(getX() + 60, getY()+20, getDirection());
+                        break;
+                    case 2:
+                        s = new Shot(getX() + 20, getY()+60, getDirection());
+                        break;
+                    case 3:
+                        s = new Shot(getX(), getY()+20, getDirection());
+                        break;
+                }
+
+                shots.add(s);
+                new Thread(s).start();
             }
 
 

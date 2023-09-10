@@ -16,7 +16,7 @@ public class MyPanel extends JPanel implements KeyListener, Runnable{
     Image image2 = null;
     Image image3 = null;
     public MyPanel(){
-        hero=new MyTank(100,100);
+        hero=new MyTank(700,100);
         hero.setSpeed(4);
         for (int i=0;i<enemyTankSize;i++){
             EnemyTank et = new EnemyTank((100*(i+2)),0);
@@ -29,6 +29,7 @@ public class MyPanel extends JPanel implements KeyListener, Runnable{
             et.shots.add(shot);
             new Thread(shot).start();
         }
+
         image1 = Toolkit.getDefaultToolkit().getImage(MyPanel.class.getResource("/image1.png"));
         image2 = Toolkit.getDefaultToolkit().getImage(MyPanel.class.getResource("/image2.png"));
         image3 = Toolkit.getDefaultToolkit().getImage(MyPanel.class.getResource("/image3.png"));
@@ -39,11 +40,21 @@ public class MyPanel extends JPanel implements KeyListener, Runnable{
     public void paint(Graphics g){
         super.paint(g);
         g.fillRect(0,0,1000,750);
-        drawTank(hero.getX(), hero.getY(), g,hero.getDirection(),0);
+        if (hero != null && hero.isLive) {
+            drawTank(hero.getX(), hero.getY(), g, hero.getDirection(), 0);
+        }
 
 
-        if (hero.shot != null && (hero.shot.isLive)){
-        g.draw3DRect(hero.shot.getX(),hero.shot.getY(),2,2,false);
+//        if (hero.shot != null && (hero.shot.isLive)){
+//        g.draw3DRect(hero.shot.getX(),hero.shot.getY(),2,2,false);
+//        }
+        for (int i=0;i<hero.shots.size();i++){
+            Shot shot = hero.shots.get(i);
+            if (hero.shot != null && (hero.shot.isLive)){
+            g.draw3DRect(shot.getX(),shot.getY(),2,2,false);
+        }else {
+                hero.shots.remove(shot);
+            }
         }
 
 
@@ -169,7 +180,32 @@ public class MyPanel extends JPanel implements KeyListener, Runnable{
 
     }
 
-    public void hitTank(Shot s, EnemyTank t){
+    public void shotsHitTanks(){
+
+        for (int j=0;j<hero.shots.size();j++) {
+            Shot shot = hero.shots.get(j);
+            if (shot != null && shot.isLive) {
+                for (int i = 0; i < enemyTanks.size(); i++) {
+                    EnemyTank enemyTank = enemyTanks.get(i);
+                    hitTank(shot, enemyTank);
+                }
+            }
+        }
+    }
+
+    public void hitMyTank(){
+        for (int i =0;i<enemyTanks.size();i++){
+            EnemyTank enemyTank = enemyTanks.get(i);
+            for (int j=0;j<enemyTank.shots.size();j++){
+                Shot shot = enemyTank.shots.get(j);
+                if (hero.isLive && shot.isLive){
+                    hitTank(shot,hero);
+                }
+
+            }
+        }
+    }
+    public void hitTank(Shot s, Tank t){
         switch (t.getDirection()){
             case 0:
             case 2:
@@ -180,6 +216,7 @@ public class MyPanel extends JPanel implements KeyListener, Runnable{
                   Bomb bomb = new Bomb(t.getX(), t.getY());
                   bombs.add(bomb);
                   enemyTanks.remove(t);
+                  hero.shots.remove(s);
               }
                 break;
             case 1:
@@ -191,6 +228,7 @@ public class MyPanel extends JPanel implements KeyListener, Runnable{
                     Bomb bomb = new Bomb(t.getX(), t.getY());
                     bombs.add(bomb);
                     enemyTanks.remove(t);
+                    hero.shots.remove(s);
                 }
                 break;
         }
@@ -205,12 +243,8 @@ public class MyPanel extends JPanel implements KeyListener, Runnable{
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
-            if (hero.shot != null && hero.shot.isLive){
-                for (int i=0;i<enemyTanks.size();i++){
-                    EnemyTank enemyTank = enemyTanks.get(i);
-                    hitTank(hero.shot,enemyTank);
-                }
-            }
+        shotsHitTanks();
+        hitMyTank();
             this.repaint();
         }
     }
