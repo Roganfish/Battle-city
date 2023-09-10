@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5fe262a9-29ce-4fbf-9780-8f1aced31d52" name="Changes" comment="0.4">
+    <list default="true" id="5fe262a9-29ce-4fbf-9780-8f1aced31d52" name="Changes" comment="0.5">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tankgame/EnemyTank.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tankgame/EnemyTank.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tankgame/MyPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tankgame/MyPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tankgame/MyTank.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tankgame/MyTank.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tankgame/Tank.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tankgame/Tank.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +37,11 @@
         <option name="url" value="https://github.com/Roganfish/Battle-city.git" />
       </UrlAndAccount>
     </option>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$USER_HOME$/Library/Java/JavaVirtualMachines/corretto-11.0.20/Contents/Home/lib/src.zip!/java.base/java/lang/NullPointerException.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$USER_HOME$/Library/Java/JavaVirtualMachines/corretto-11.0.20/Contents/Home/lib/src.zip!/java.desktop/sun/awt/SunToolkit.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$USER_HOME$/Library/Java/JavaVirtualMachines/corretto-11.0.20/Contents/Home/lib/src.zip!/java.desktop/sun/lwawt/macosx/LWCToolkit.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
@@ -160,7 +161,15 @@
       <option name="project" value="LOCAL" />
       <updated>1694303046361</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="0.5">
+      <option name="closed" value="true" />
+      <created>1694307507649</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1694307507649</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -195,6 +204,7 @@
     <MESSAGE value="bullet" />
     <MESSAGE value="dis" />
     <MESSAGE value="0.4" />
-    <option name="LAST_COMMIT_MESSAGE" value="0.4" />
+    <MESSAGE value="0.5" />
+    <option name="LAST_COMMIT_MESSAGE" value="0.5" />
   </component>
 </project>
